@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            icon="icons/alt_window16.gif">
+         <run
+               class="org.eclipse.hyperbola.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="org.eclipse.hyperbola.Perspective"
+            id="org.eclipse.hyperbola.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="org.eclipse.hyperbola.ContactsView"
+            id="org.eclipse.hyperbola.views.contacts"
+            name="Contacts"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.eclipse.hyperbola.editors.ChatEditor"
+            default="false"
+            icon="icons/online.gif"
+            id="org.eclipse.hyperbola.editors.chat"
+            name="Chat">
+      </editor>
+   </extension>
+
+</plugin>
